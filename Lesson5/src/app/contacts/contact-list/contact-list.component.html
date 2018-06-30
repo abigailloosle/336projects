@@ -1,0 +1,19 @@
+<div class="row panel panel-default">
+  <div class="col-xs-12 panel-heading">
+    <span style="font-size: 3em; font-weight: bold;"> Contacts </span>
+    <button class="btn btn-success pull-right"> New Contact </button>
+  </div>
+
+
+<hr>
+
+<div class="row panel-body">
+  <div class="col-xs-12" style= 'padding-top: 1em;'>
+    <app-contact-item
+      *ngFor="let contactEl of contacts"
+      [contact]="contactEl"
+      (click)="onContactSelected(contactEl)"></app-contact-item>
+
+  </div>
+</div>
+</div>
