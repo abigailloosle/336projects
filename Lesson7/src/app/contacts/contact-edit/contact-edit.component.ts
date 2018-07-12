@@ -68,7 +68,7 @@ export class ContactEditComponent implements OnInit {
 
   isInvalidContact(newContact: Contact) {
     if (!newContact) {
-      return true;
+      return false;
     }
 
     if (newContact.id === this.contact.id) {
@@ -85,6 +85,8 @@ export class ContactEditComponent implements OnInit {
 
   addToGroup($event: any) {
     let selectedContact: Contact = $event.dragData;
+    console.log(JSON.stringify($event));
+    console.log(JSON.stringify($event.dragData));
     this.invalidGroupContact = this.isInvalidContact(selectedContact);
 
     if (this.invalidGroupContact) {
